@@ -34,7 +34,6 @@ const findMiddleOfUnorderedThenReorderedUpdates = (updates, ruleMap) => {
     return middlePageNumberSum
 }
 
-// We can know the ideal order based off the cardinality of the set from our map
 const orderUnorderedUpdate = (unorderedUpdate, ruleMap) =>
     [...unorderedUpdate].sort((a, b) => {
         const aContainsB = ruleMap.get(a)?.has(b) ?? false
